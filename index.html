@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modelo de Currículo — Seu Nome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#0f6efd;
+      --muted:#6b7280;
+      --bg:#f7f7fb;
+      --card:#ffffff;
+      --radius:12px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:24px;background:var(--bg);color:#111}
+    .container{max-width:900px;margin:0 auto}
+    .card{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:0 6px 20px rgba(16,24,40,0.06)}
+
+    .header{display:flex;gap:20px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#6c63ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:28px}
+    .name-block{flex:1}
+    .name{font-size:22px;font-weight:700;margin:0}
+    .title{color:var(--muted);margin-top:4px}
+
+    .contact{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;color:var(--muted);font-size:14px}
+    .contact a{color:inherit;text-decoration:none}
+
+    .main{display:grid;grid-template-columns:2fr 1fr;gap:22px;margin-top:22px}
+
+    .section{margin-bottom:18px}
+    .section h3{margin:0 0 12px 0;font-size:15px}
+    .summary{color:var(--muted);line-height:1.5}
+
+    /* Experience and education list */
+    .item{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(15,110,253,0.03),transparent);margin-bottom:10px}
+    .item .meta{display:flex;justify-content:space-between;gap:10px}
+    .item .job{font-weight:600}
+    .item .period{color:var(--muted);font-size:13px}
+    .item p{margin:8px 0 0 0;color:var(--muted);font-size:14px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#eef2ff;padding:6px 10px;border-radius:999px;font-size:13px}
+
+    .right-col{background:transparent}
+    .profile-list{list-style:none;padding:0;margin:0}
+    .profile-list li{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed #eee}
+
+    .print-btn{display:inline-block;margin-top:8px;padding:8px 12px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
+
+    @media (max-width:760px){
+      .main{grid-template-columns:1fr}
+      .avatar{width:76px;height:76px;font-size:22px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <div class="avatar">SN</div>
+        <div class="name-block">
+          <h1 class="name">Seu Nome Completo</h1>
+          <div class="title">Desenvolvedor Front‑end • UX Enthusiast</div>
+          <div class="contact">
+            <div>Email: <a href="mailto:seu@exemplo.com">seu@exemplo.com</a></div>
+            <div>Telefone: <a href="tel:+551199999999">+55 (11) 99999‑9999</a></div>
+            <div>LinkedIn: <a href="#">linkedin.com/in/seu-perfil</a></div>
+            <div>Local: São Paulo, Brasil</div>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <a class="print-btn" href="#" onclick="window.print();return false;">Imprimir / PDF</a>
+        </div>
+      </div>
+
+      <div class="main">
+        <div>
+          <section class="section">
+            <h3>Resumo Profissional</h3>
+            <div class="summary">Profissional com X anos de experiência em desenvolvimento web, criando aplicações responsivas e focadas em performance. Paixão por UX, testes automatizados e boas práticas de engenharia.</div>
+          </section>
+
+          <section class="section">
+            <h3>Experiência</h3>
+            <div class="item">
+              <div class="meta">
+                <div>
+                  <div class="job">Desenvolvedor Front‑end — Empresa Exemplo</div>
+                  <div class="period">Jan 2022 – Atual</div>
+                </div>
+                <div class="period">São Paulo, BR</div>
+              </div>
+              <p>Principais realizações: construí a nova interface do painel administrativo, reduzi o tempo de carregamento em 40% e implementei testes automatizados com Jest.</p>
+            </div>
+
+            <div class="item">
+              <div class="meta">
+                <div>
+                  <div class="job">Engenheiro de Software — Outra Empresa</div>
+                  <div class="period">Mar 2019 – Dez 2021</div>
+                </div>
+                <div class="period">Remoto</div>
+              </div>
+              <p>Atuação em aplicações full‑stack, API design e integração com serviços externos.</p>
+            </div>
+          </section>
+
+          <section class="section">
+            <h3>Formação</h3>
+            <div class="item">
+              <div class="meta">
+                <div>
+                  <div class="job">Bacharel em Ciência da Computação — Universidade Exemplo</div>
+                  <div class="period">2015 – 2018</div>
+                </div>
+                <div class="period">São Paulo, BR</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h3>Projetos Relevantes</h3>
+            <div class="item">
+              <div class="job">Projeto Open Source XYZ</div>
+              <p>Descrição curta do projeto, link para repositório e tecnologias usadas (React, Node, Docker).</p>
+            </div>
+          </section>
+        </div>
+
+        <aside class="right-col">
+          <section class="section">
+            <h3>Competências</h3>
+            <div class="skills">
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">React</span>
+              <span class="skill">Flutter</span>
+              <span class="skill">Testes (Jest/Mockito)</span>
+              <span class="skill">Git</span>
+            </div>
+          </section>
+
+          <section class="section">
+            <h3>Informações</h3>
+            <ul class="profile-list">
+              <li><span>Disponibilidade</span><strong>Imediata</strong></li>
+              <li><span>Remoto</span><strong>Sim</strong></li>
+              <li><span>Carteira</span><strong>CLT / PJ</strong></li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h3>Idiomas</h3>
+            <ul class="profile-list">
+              <li><span>Português</span><strong>Nativo</strong></li>
+              <li><span>Inglês</span><strong>Avançado</strong></li>
+            </ul>
+          </section>
+
+          <section class="section">
+            <h3>Certificações</h3>
+            <div style="color:var(--muted);font-size:14px">Ex.: Certificação XYZ — 2023</div>
+          </section>
+
+        </aside>
+      </div>
+
+      <footer style="margin-top:18px;color:var(--muted);font-size:13px">Dica: personalize com suas cores, troque "SN" pela sua foto (use &lt;img&gt;), e ajuste texto para deixar o currículo com até 2 páginas ao imprimir.</footer>
+    </div>
+  </div>
+</body>
+</html>
